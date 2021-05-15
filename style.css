@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(189, 62, 3);
+    text-align: center ;
+}
+.alligned{
+    align-items : center;
+    display: inline-block;
+    text-align: left;
+    background-color: rgb(128, 43, 3);
+
+}
+.URL{
+    text-align: center;
+    align-items: center;
+
+}
+.survey{
+    text-align: left;
+}
