@@ -1,4 +1,5 @@
 body{
+    
     background-color: rgb(189, 62, 3);
     text-align: center ;
 }
@@ -7,7 +8,7 @@ body{
     display: inline-block;
     text-align: left;
     background-color: rgb(128, 43, 3);
-
+    color:white
 }
 .URL{
     text-align: center;
@@ -16,4 +17,5 @@ body{
 }
 .survey{
     text-align: left;
+    color : white
 }
