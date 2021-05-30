@@ -24,8 +24,8 @@
  
   
     <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    <button class="tablinks" id="products" onclick="openInfo(event, 'Products')">Products</button>
+    <button class="tablinks" id="cart" onclick="openInfo(event, 'Cart')">Cart</button>
 
   
   
@@ -34,16 +34,24 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3 id="info">Client Information</h3>
-  <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-    <option value="None">Select</option>
-    <option value="None">None</option>
-	  <option value="Organic">Organic</option>
-	  <option value="Lactoseintolerant">Lactose-intolerant</option>
-    <option value="NutFree">Nut free</option>
+	<table id="Filter" name="Filter"  onchange="populateListProductChoices('displayProduct')">
+    <div class= "filter">
+      
+        <tr>
+            <td><input id="NutFree" type="checkbox" value="NutFree"/><label for="chkNutFree">Nut Free</label></td>
+        </tr>
+        <tr>
+            <td><input id="LactoseFree" type="checkbox" value="Lactoseintolerant"/><label for="chkLactoseFree">Lactose Free</label></td>
+        </tr>
+        <tr>
+            <td><input id="Organic" type="checkbox" value="Organic"/><label for="chkOrganic">Organic</label></td>
+        </tr>
     
-	</select>
+    </div>
+    
+    
+  </table>
 </div>
 
 <div id="Products" class="tabcontent">

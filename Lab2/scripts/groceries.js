@@ -3,75 +3,78 @@
 
 var products = [
 	{
-		name: "Brocoli",
+		name: "Brocoli (Organic) - $1.99",
 		Organic: true,
 		Lactoseintolerant: true,
 		NutFree: true,
 		price: 1.99
 	},
 	{
-		name: "Bread",
+		name: "Bread - $2.35",
 		Organic: false,
 		Lactoseintolerant: true,
 		NutFree: true,
 		price: 2.35
 	},
 	{
-		name: "Salmon",
-		Organic: true,
-		Lactoseintolerant: true,
-		NutFree: true,
-		price: 10.00
-	},
-	{
-		name: "Milk",
-		Organic: true,
-		Lactoseintolerant: false,
-		NutFree: true,
-		price: 5.99
-	},
-	{
-		name: "Peanut Butter",
-		Organic: true,
-		Lactoseintolerant: true,
-		NutFree: false,
-		price: 4.00
-	},
-	{
-		name: "Vanilla Ice Cream",
-		Organic: false,
-		Lactoseintolerant: false,
-		NutFree: true,
-		price: 6.99
-	},
-	{
-		name: "Steak",
-		Organic: true,
-		Lactoseintolerant: true,
-		NutFree: true,
-		price: 14.99
-	},
-	{
-		name: "Mars bar",
+		name: "Mars bar - $2.99",
 		Organic: false,
 		Lactoseintolerant: false,
 		NutFree: true,
 		price: 2.99
 	},
 	{
-		name: "Eggs",
+		name: "Peanut Butter - $4.00",
+		Organic: true,
+		Lactoseintolerant: true,
+		NutFree: false,
+		price: 4.00
+	},
+	{
+		name: "Milk (Organic) - $5.99",
+		Organic: true,
+		Lactoseintolerant: false,
+		NutFree: true,
+		price: 5.99
+	},
+	{
+		name: "Vanilla Ice Cream - $6.99 ",
+		Organic: false,
+		Lactoseintolerant: false,
+		NutFree: true,
+		price: 6.99
+	},
+	{
+		name: "Mortadella - 7.00$",
+		Organic: false,
+		Lactoseintolerant: true,
+		NutFree: true,
+		price: 7.00
+	},
+	{
+		name: "Salmon (Organic) - $10.00",
+		Organic: true,
+		Lactoseintolerant: true,
+		NutFree: true,
+		price: 10.00
+	},
+	
+	{
+		name: "Steak (Organic) - $14.99",
 		Organic: true,
 		Lactoseintolerant: true,
 		NutFree: true,
 		price: 14.99
 	},
+	
 	{
-		name: "Mortadella",
-		Organic: false,
+		name: "Eggs (Organic) - $15.00",
+		Organic: true,
 		Lactoseintolerant: true,
 		NutFree: true,
-		price: 7.00
+		price: 15.00
 	}
+	
 	
 ];
 	
@@ -82,19 +85,26 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Lactoseintolerant") && (prods[i].Lactoseintolerant == true)){
-			product_names.push(prods[i].name);
+	if(restriction["none"]==true) {
+		for (let i=0; i<prods.length; i+=1) {
+			product_names.push(prods[i]);
 		}
-		else if ((restriction == "NutFree") && (prods[i].NutFree == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "Organic") && (prods[i].Organic == true)){
-			product_names.push(prods[i].name);
-		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name);
-		}
+	} else {
+		for (let i=0; i<prods.length; i+=1) {
+			var toAdd = true;
+			if (restriction["NutFree"]==true && prods[i]["NutFree"]!=true){
+				toAdd = false;		
+			}
+			if (restriction["Lactoseintolerant"]==true && prods[i]["Lactoseintolerant"]!=true){
+				toAdd = false;		
+			}
+			if (restriction["Organic"]== true && prods[i]["Organic"]!=true){
+				toAdd = false;		
+			}
+			if(toAdd==true){
+				product_names.push(prods[i]);
+			}
+		}	
 	}
 	return product_names;
 }
