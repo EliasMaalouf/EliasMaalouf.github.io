@@ -73,3 +73,33 @@
   #sign{
     text-align: center;
   }
+  .c-p{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 8px;
+    inline-size : 90px;
+  }
+  .p-ca{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 8px;
+    inline-size: 90px;
+  }
+  .p-c{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 8px;
+    inline-size : 90px;
+  }
+  #addCart{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 8px;
+    inline-size : 200px;
+  }
+  .ca-p{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 8px;
+    inline-size : 90px;
+  }

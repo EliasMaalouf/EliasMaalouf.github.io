@@ -52,6 +52,12 @@
     
     
   </table>
+  <br>
+  <button class = "c-p" onclick="openInfo(event, 'Products')">
+    <a  class="next">Next &raquo;</a>
+
+  </button>
+  
 </div>
 
 <div id="Products" class="tabcontent">
@@ -59,15 +65,35 @@
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
+   <br>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>
+  <br>
+  <br>
+  <div class = "nav-btn">
+    <button class = "p-ca" onclick="openInfo(event, 'Client')">
+      <a  class="previous">&laquo; Previous</a>
+  
+    </button>
+    <button class = "p-c" onclick="openInfo(event, 'Cart')">
+      <a  class="next">Next &raquo;</a>
+  
+    </button>
+
+  </div>
+  
 </div>
 
 <div id="Cart" class="tabcontent">
   <h3>Cart</h3>
   <p>Here is your cart.</p>
   <div id="displayCart"></div>
+
+  <button class = "ca-p" onclick="openInfo(event, 'Products')">
+    <a  class="previous">&laquo; Previous</a>
+
+  </button>
 </div>
 
 <script src="scripts/groceries.js"></script>
