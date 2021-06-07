@@ -13,5 +13,11 @@ body{
     padding : 0;
     background-color: rgba(3, 136, 180, 0.986);
 }
-
+.location{
+    text-align: center;
+    
+}
+.sign{
+    text-align: center;
+}
     
