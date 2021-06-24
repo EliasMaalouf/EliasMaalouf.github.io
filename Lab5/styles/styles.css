@@ -1,0 +1,23 @@
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+body{
+    margin: 0;
+    padding : 0;
+    background-color: rgba(3, 136, 180, 0.986);
+}
+.location{
+    text-align: center;
+    
+}
+.sign{
+    text-align: center;
+}
+    
