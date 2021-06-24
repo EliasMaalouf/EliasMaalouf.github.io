@@ -1,0 +1,53 @@
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+body{
+    margin: 0;
+    padding : 0;
+    background-color: rgba(3, 136, 180, 0.986);
+}
+.location{
+    text-align: center;
+    
+}
+.sign{
+    text-align: center;
+}
+
+.nav-item {
+    padding-right: 5px;
+    right: 10px;
+    font-size: 30px;
+    font-family: 'Mali', cursive;
+    border-right: 1px solid black;
+  }
+  .nav-item:hover {
+    background-color: #093f81;
+    color: white;
+  }
+
+  .nav-link:hover{
+      color: white;
+  }
+
+  .nav-link{
+      color: #093f81;
+  }
+
+  .navbar{
+      background-color: rgba(211, 211, 211, 0.705);
+  }
+
+#navimages {
+    margin-right: 8px;
+    margin-left: 5px;
+}
+
+    
