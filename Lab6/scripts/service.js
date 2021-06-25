@@ -1,20 +1,20 @@
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
 const setDateFormat = "mm/dd/yy";
 
-var giorgio = {
-    name: "Giorgio Frigo",
+var Boyardeez = {
+    name: "Boya Boyardeez",
     value:1,
     dayOff: [1,3],
 };
-var julie = 
+var Selenou = 
 {
-    name: "Julie Lope",
+    name: "Aime Selenou",
     value:2,
     dayOff: [1,2,6],
 };
-var megan = 
+var Candice = 
 {
-    name: "Megan Kole",
+    name: "Can Candice",
     value:3,
     dayOff: [4,5],
 };
@@ -32,7 +32,7 @@ function validateCredit(a) {
 
 function disableDates(date) {
     
-    //var therapist = document.getElementsByName("exampleRadios2").value;
+    
     
     var els = document.getElementsByName('exampleRadios2');
     for (var i=0;i<els.length;i++){
@@ -42,12 +42,12 @@ function disableDates(date) {
     }
     console.log(therapist);
     var dayOFF;
-    if(therapist == giorgio.value){
-        dayOFF = giorgio.dayOff;
-    }else if(therapist == julie.value){
-        dayOFF = julie.dayOff;
-    }else if(therapist == megan.value){
-        dayOFF = megan.dayOff;
+    if(therapist == Boyardeez.value){
+        dayOFF = Boyardeez.dayOff;
+    }else if(therapist == Selenou.value){
+        dayOFF = Selenou.dayOff;
+    }else if(therapist == Candice.value){
+        dayOFF = Candice.dayOff;
     }
     
     if (date.getDay() == 0 || dayOFF.includes(date.getDay()))
