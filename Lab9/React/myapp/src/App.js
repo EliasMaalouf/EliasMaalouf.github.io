@@ -1,13 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Button from 'react-bootstrap/Button'
+import Nav from './components/Nav'
+import Body from './components/Body'
 function App() {
   return (
     <div className="App">
-      <Button variant="primary">bootstrap</Button>
-      
-        
-
+      <Nav></Nav>
+      <Body></Body>
     </div>
   );
 }
