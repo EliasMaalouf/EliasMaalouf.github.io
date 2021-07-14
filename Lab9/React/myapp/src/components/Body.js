@@ -26,14 +26,14 @@ function Body(){
     return(  
           
     <Container>
-        <Jumbotron fluid>
+        <Jumbotron fluid id="jum">
             <Container>
                 <h1 > <img src={nut} id = "img1" alt="" className="icon"/> Go Nuts</h1>
             </Container>
            
         </Jumbotron>
 
-        <Jumbotron fluid>
+        <Jumbotron fluid id="jum">
             <Container>
                 <h2>Browse through the biggest selection of fresh nuts in Ottawa!</h2>
                 <br></br>
@@ -47,7 +47,7 @@ function Body(){
         </Jumbotron>
 
 
-        <Jumbotron fluid>
+        <Jumbotron fluid id="jum">
             <Container>
             <div class ="p-3 my-3 bg">
 
@@ -64,7 +64,7 @@ function Body(){
         </Jumbotron>
 
         <div class ="p-3 my-3 bg" id = "menu">
-        <Jumbotron fluid>
+        <Jumbotron fluid id="jum">
             <Container>
             <h1 class="" > <img src={menu} alt="" className="icon1"/> Our Menu</h1><br></br>
 
@@ -264,7 +264,7 @@ function Body(){
 </div>    
 
 <div class ="p-3 my-3 bg">
-<Jumbotron fluid>
+<Jumbotron fluid id="jum">
             <Container>
             <h1 class=""> <img src={help} alt="" className="icon"/> Help</h1><br></br>
     <h5>Frequently Asked Questions</h5>
