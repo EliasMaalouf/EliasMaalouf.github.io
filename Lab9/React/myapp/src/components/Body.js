@@ -161,9 +161,9 @@ const t58=[<Nav.Link href="#Help"><img src={help} alt="" className="smallicon"/>
        
         {/*<Nav.Link href="#Help"><img src={help} alt="" className="smallicon"/> Help</Nav.Link>*/}
         {t58[lang]}
-        <Fragment>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Fragment>
-        <Nav.Link onClick={setEN} id="lan"><img alt="" className="smallicon"/> EN</Nav.Link>
-        <Nav.Link onClick={setFR} id="lan"><img  alt="" className="smallicon"/> FR</Nav.Link>
+        <Fragment>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Fragment>
+        <Nav.Link onClick={setEN} id="lan"> EN</Nav.Link>
+        <Nav.Link onClick={setFR} id="lan"> FR</Nav.Link>
          {/*}       <button className="langbtn english" onClick={setEN}>EN</button>
                 <button className="langbtn french" onClick={setFR}>FR</button>*/}
         </Nav>
