@@ -31,6 +31,24 @@ function Body(){
 const setFR =() =>{
   setLang(1);
 }
+
+function confirmsubmission() {
+ 
+  var boolean= true;
+  
+  if(document.getElementById("email1").value.length==0){
+    boolean=false;
+  }
+  if(boolean==true){
+    alert("Congrats! You have successfully placed the order.");
+  }else{
+    alert("There seems to be an error in one of the fields.");
+  }
+  
+
+}
+
+
 const t1 = [<h2 className="Title">Browse through the biggest selection of fresh nuts in Ottawa!.</h2>,
       <h2 className="Title">Parcourez la plus grande sélection de noix fraîches à Ottawa!</h2>];
 const tbtn = [<a href = "#menu" className="link">Browse our selection{">"}</a>,
@@ -66,8 +84,8 @@ const t10=[<Modal.Title id="mod">Please fill out the required information</Modal
 <Modal.Title id="mod">Veuillez remplir les informations requises</Modal.Title>]
 const t11=[<Form.Label id="name">Full Name</Form.Label>,<Form.Label id="name">Nom et prénom</Form.Label>]
 
-const t12=[<Form.Control id = "place" type="name" placeholder="Full Name" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>,
-          <Form.Control id = "place" type="name" placeholder="Nom et prénom" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>]
+const t12=[<Form.Control id = "name" required type="name" placeholder="Full Name" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>,
+          <Form.Control id = "name" required type="name" placeholder="Nom et prénom" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>]
 
 const t13=[<Form.Label id = "e">Email address</Form.Label>,
         <Form.Label id = "e">Courriel</Form.Label>]
@@ -80,9 +98,9 @@ Close
 </Button>, <Button variant="secondary" onClick={handleClose}>
         Fermer
       </Button>]
-const t17=[<Button variant="primary" onClick={handleClose}>
+const t17=[<Button id= "alert" type="submit" variant="primary" value = "place order!"  onClick={() => confirmsubmission()}  >
 Place Order
-</Button>,<Button variant="primary" onClick={handleClose}>
+</Button>,<Button id= "alert" type="submit" variant="primary"  onClick={() => confirmsubmission()} >
       Passer la commande
       </Button> ]
 
@@ -225,6 +243,7 @@ const t58=[<Nav.Link href="#Help"><img src={help} alt="" className="smallicon"/>
             {/*<h1 class="men" > <img src={menu} alt="" className="icon1"/> Our Menu</h1>*/}
             {t7[lang]}
             <br></br>
+            
 
 <CardDeck>
 <Card>
@@ -252,12 +271,12 @@ const t58=[<Nav.Link href="#Help"><img src={help} alt="" className="smallicon"/>
     <Modal.Body>
       <Form>
         <Form.Group controlId="name">
-          <Form.Label>Full Name</Form.Label>
-          <Form.Control type="name" placeholder="Full Name" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+          <Form.Label >Full Name</Form.Label>
+          <Form.Control  type="name" placeholder="Full Name" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
         </Form.Group>
         <Form.Group controlId="email">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="name@example.com" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+          <Form.Control  type="email" placeholder="name@example.com" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
         </Form.Group>
         <Form.Group controlId="email">
           <Form.Label>Home address</Form.Label>
@@ -394,26 +413,26 @@ const t58=[<Nav.Link href="#Help"><img src={help} alt="" className="smallicon"/>
     </Modal.Header>
     <Modal.Body>
       <Form>
-        <Form.Group controlId="name">
+        <Form.Group controlId="name1">
           {/*<Form.Label id="name">Full Name</Form.Label>*/}
           {t11[lang]}
-          {/*<Form.Control id = "place" type="name" placeholder="Full Name" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>*/}
+          {/*<Form.Control id = "name" required type="name" placeholder="Full Name" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>*/}
           {t12[lang]}
         </Form.Group>
         <Form.Group controlId="email">
           {/*<Form.Label id = "e">Email address</Form.Label>*/}
           {t13[lang]}
-          <Form.Control  type="email" placeholder="name@example.com" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+          <Form.Control  type="email" id = "email1" placeholder="name@example.com" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
         </Form.Group>
         <Form.Group controlId="adress">
           {/*<Form.Label>Home address</Form.Label>*/}
           {t14[lang]}
-          <Form.Control type="adress" placeholder="123 test dr" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+          <Form.Control required type="adress" placeholder="123 test dr" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
         </Form.Group>
         <Form.Group controlId="credit">
           {/*<Form.Label>Credit Card#</Form.Label>*/}
           {t15[lang]}
-          <Form.Control type="credit" placeholder="XXXX-XXXX-XXXX-XXXX" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+          <Form.Control required id="cc" type="credit" placeholder="XXXX-XXXX-XXXX-XXXX" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
         </Form.Group>
       </Form>
     </Modal.Body>
@@ -422,7 +441,7 @@ const t58=[<Nav.Link href="#Help"><img src={help} alt="" className="smallicon"/>
         Close
           </Button>*/}
           {t16[lang]}
-      {/*<Button variant="primary" onClick={handleClose}>
+      {/*<Button id= "alert" type="submit" variant="primary" value = "place order!"  onClick={handleClose}>
         Place Order
         </Button>*/}
         {t17[lang]}
